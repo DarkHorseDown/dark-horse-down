@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+  "name": "Dark Horse Down",
+  "description": "Save your books before it's too late!",
+  "version": "1.0",
+
+  "permissions": [
+    "downloads",
+    "webRequest",
+    "webRequestBlocking",
+    "tabs",
+    "https://drhq3xefn6rcs.cloudfront.net/*",
+    "https://digital.darkhorse.com/*"
+  ],
+
+  "background": {
+    "scripts": [
+      "background.js",
+      "popup.js"
+    ]
+  },
+
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://drhq3xefn6rcs.cloudfront.net/*",
+        "https://digital.darkhorse.com/*"
+      ],
+      "js": ["content-script.js"]
+    }
+  ]
+}

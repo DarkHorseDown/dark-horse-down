@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Download Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 10px;
+        }
+        #info {
+            margin-bottom: 10px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .status-complete {
+            color: green;
+        }
+        .status-incomplete {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<h1>Book Info</h1>
+<div id="info">
+    <p><strong>Name:</strong> <span id="bookName">Loading...</span></p>
+    <p><strong>Download Status:</strong> <span id="downloadComplete">Loading...</span></p>
+    <p><strong>Total Pages:</strong> <span id="pageCount">Loading...</span></p>
+    <h2>Pages Pending</h2>
+    <ul id="pendingPages">
+        <li>Loading...</li>
+    </ul>
+</div>
+</body>
+<script src="popup.js"></script>
+</html>
